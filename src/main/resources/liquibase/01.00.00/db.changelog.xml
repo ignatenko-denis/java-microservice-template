@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="tag_schema_01.00.00" author="liquibase-sample" runAlways="true" runOnChange="true">
+        <tagDatabase tag="01.00.00"/>
+    </changeSet>
+
+    <changeSet id="apply_schema_01.00.00" author="liquibase-sample" runAlways="true" runOnChange="true">
+        <sqlFile path="apply_01.00.00.sql" relativeToChangelogFile="true" stripComments="true"/>
+        <rollback>
+            <sqlFile path="rollback_01.00.00.sql" relativeToChangelogFile="true" stripComments="true"/>
+        </rollback>
+        <comment>Installing version 01.00.00 - create 1 table</comment>
+    </changeSet>
+
+</databaseChangeLog>

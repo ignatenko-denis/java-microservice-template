@@ -1,0 +1,29 @@
+app:
+  label: prod-env
+
+server:
+  port: 8081
+
+spring:
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        default_schema: sample
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://sample:5432/sample?prepareThreshold=0
+    username: sample
+    password: sample
+    platform: postgres
+    hikari:
+      schema: sample
+
+management:
+  endpoint:
+    info:
+      enabled: true

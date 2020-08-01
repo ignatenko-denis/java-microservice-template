@@ -1,0 +1,10 @@
+/.idea/
+/logs/
+/target/
+/java-microservice-template.iml
+/ci/logs/
+/sample.lck
+/sample.log
+/sample.properties*
+/sample.script
+/sample.tmp

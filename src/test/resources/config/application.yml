@@ -1,0 +1,13 @@
+app:
+  label: test-env
+
+spring:
+  jpa:
+    show-sql: true
+    generate-ddl: true
+
+  datasource:
+    driver-class-name: org.hsqldb.jdbcDriver
+    url: jdbc:hsqldb:file:sample;sql.syntax_pgs=true
+    username: sa
+    password: sa

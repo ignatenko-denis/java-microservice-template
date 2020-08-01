@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <client id="-1"
+          name="Test"
+          birthday="1990-05-01"
+          created_at="2020-01-01 22:01:34.000 +0300"
+          xml="&lt;xml/&gt;"
+          status="ACTIVE"
+          vip="true"/>
+
+    <client id="-2"
+          name="Max"
+          birthday="1995-06-05"
+          created_at="2020-01-01 22:01:34.000 +0300"
+          xml="&lt;xml/&gt;"
+          status="ACTIVE"
+          vip="true"/>
+
+    <client id="-3"
+          name="Alice"
+          birthday="2002-01-01"
+          created_at="2020-01-01 22:01:34.000 +0300"
+          xml="[null]"
+          status="ACTIVE"
+          vip="true"/>
+</dataset>
