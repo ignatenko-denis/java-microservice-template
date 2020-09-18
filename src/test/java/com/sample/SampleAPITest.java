@@ -1,15 +1,14 @@
 package com.sample;
 
-import com.google.protobuf.InvalidProtocolBufferException;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Slf4j
-public class SampleAPITest {
+class SampleAPITest {
     @Test
-    public void test() {
+    void parseFrom() {
         SampleAPI.Date birthday = SampleAPI.Date.newBuilder()
                 .setYear(2020).setMonth(1).setDay(1)
                 .build();
@@ -23,11 +22,13 @@ public class SampleAPITest {
         byte[] bytes = rs.toByteArray();
 
         try {
-            SampleAPI.ClientRs parsed = SampleAPI.ClientRs.parseFrom(bytes);
+            SampleAPI.ClientRs parsed = SampleAPI.ClientRs.newBuilder()
+                    .mergeFrom(bytes)
+                    .build();
 
             assertEquals(rs, parsed);
-        } catch (InvalidProtocolBufferException e) {
-            log.error("error", e);
+        } catch (Exception e) {
+            log.error("Check *.proto file. Cannot parse", e);
         }
     }
 }

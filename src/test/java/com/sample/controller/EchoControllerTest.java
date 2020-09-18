@@ -14,7 +14,7 @@ import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class EchoControllerTest {
+class EchoControllerTest {
     @LocalServerPort
     private int port;
 
@@ -24,12 +24,12 @@ public class EchoControllerTest {
     private TestRestTemplate template;
 
     @BeforeEach
-    public void setUp() throws Exception {
+    void setUp() throws Exception {
         base = new URL("http://localhost:" + port + "/echo");
     }
 
     @Test
-    public void echo() {
+    void echo() {
         ResponseEntity<LocalDate> rs = template.getForEntity(base.toString(), LocalDate.class);
         assertNotNull(rs.getBody());
     }

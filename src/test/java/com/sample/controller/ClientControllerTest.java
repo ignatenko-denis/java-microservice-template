@@ -34,12 +34,12 @@ public class ClientControllerTest {
     private ClientRepository clientRepository;
 
     @BeforeEach
-    public void init() throws Exception {
+    void setUp() throws Exception {
         base = new URL("http://localhost:" + port);
     }
 
     @Test
-    public void testClients() {
+    void testClients() {
         String name = "Test" + new Random().nextInt();
         Client client = buildClient(name);
 

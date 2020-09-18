@@ -15,12 +15,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestPropertySource(locations = "/config/application.yml")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ClientRepositoryTest {
+class ClientRepositoryTest {
     @Autowired
     private ClientRepository clientRepository;
 
     @Test
-    public void testFindByNameOrderByBirthdayAsc() {
+    void findByNameOrderByBirthdayAsc() {
         String name = "Test" + new Random().nextInt();
         Client client = buildClient(name);
 
