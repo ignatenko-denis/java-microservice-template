@@ -34,7 +34,7 @@
         <maven-pmd-plugin.version>3.13.0</maven-pmd-plugin.version>
         <protoc-jar-maven-plugin.version>3.11.4</protoc-jar-maven-plugin.version>
         <liquibase-maven-plugin.version>4.0.0</liquibase-maven-plugin.version>
-        <postgresql.version>42.3.3</postgresql.version>
+        <postgresql.version>42.4.1</postgresql.version>
     </properties>
 
     <dependencies>
